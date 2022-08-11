@@ -1,6 +1,13 @@
 import './App.css';
 import face from './assets/logo.png'
 import { Mastodon, Discord } from "react-bootstrap-icons"
+import pisimaka from './assets/projects/pisimaka.png';
+import ledcontroller from './assets/projects/ledcontroller.png'
+import darkoxygen from './assets/projects/dog.png';
+import zemislocker from './assets/projects/zemislocker.png';
+import shitcast from './assets/projects/shitcast.png';
+import fourinarow from './assets/projects/fourinarow.png';
+import thiswebsite from './assets/projects/thiswebsite.png';
 
 function App() {
   return (
@@ -17,55 +24,114 @@ function App() {
         <div className="container max-w-screen-xl mx-auto">
           <div className="text-start ml-5">
             <span className="text-gray-900 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
-            <p className="font-normal text-gray-600 text-md md:text-xl max-w-screen-sm mb-8">I'm a teenager with a passion for software. I enjoy creating things that make life easier (or even harder, maybe :P)</p>
-            <a href="#cards" className="scroll"><button className="btn-primary">Literally just scroll down</button></a>
+            <p className="font-normal text-gray-600 text-md md:text-xl max-w-screen-sm mb-8">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
+            <a href="#cards" className="scroll"><button id="cards" className="btn-primary">Literally just scroll down</button></a>
           </div>
         </div>
       </section>
 
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-gray-50 px-8 py-10 rounded-md" id="cards">
-              <div className="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                <i data-feather="activity"></i>
+          <div className="w-fit h-fit mb-8">
+            <div className="text-4xl text-slate-800 md:text-5xl font-medium">Projects</div>
+            <div className="h-2 w-full bg-amber-400"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">This website <a href="https://github.com/Ucaninek/zemi-website-react" class="underline text-sm">Github</a></h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-cyan-700 border-cyan-500 bg-cyan-200">Tailwind CSS</div>
+                  <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
+                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">React.js</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={thiswebsite} alt="This website" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">The website you are viewing right now. yes.</p>
               </div>
-
-              <h4 className="font-medium text-gray-700 text-lg mb-4">High experience</h4>
-
-              <p className="font-normal text-gray-500 text-md">
-                Lorem ipsum dolor sit amet, consectetur <br />
-                adipiscing elit, sed do eiusmod tempor <br />
-                incididunt ut labore et dolore magna aliqua.
-              </p>
             </div>
-
-            <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <div className="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                <i data-feather="codesandbox"></i>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">Pisimaka.exe</h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={pisimaka} alt="pisimaka" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off.</p>
               </div>
-
-              <h4 className="font-medium text-gray-700 text-lg mb-4">Useful sandboxes</h4>
-
-              <p className="font-normal text-gray-500 text-md">
-                Lorem ipsum dolor sit amet, consectetur <br />
-                adipiscing elit, sed do eiusmod tempor <br />
-                incididunt ut labore et dolore magna aliqua.
-              </p>
             </div>
-
-            <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <div className="w-20 py-6 flex justify-center bg-gray-100 rounded-md mb-4">
-                <i data-feather="coffee"></i>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">LedController</h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
+                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Arduino</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={ledcontroller} alt="pisimaka" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">i hooked up the leds in my pc case to an arduino because my dumb msi motherboard only could do 7 hardcoded colors, dumb. this the app that controls the arduino with a COM port.</p>
               </div>
-
-              <h4 className="font-medium text-gray-700 text-lg mb-4">Success side projects</h4>
-
-              <p className="font-normal text-gray-500 text-md">
-                Lorem ipsum dolor sit amet, consectetur <br />
-                adipiscing elit, sed do eiusmod tempor <br />
-                incididunt ut labore et dolore magna aliqua.
-              </p>
+            </div>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">DarkOxyGen Website</h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-orange-600 border-orange-500 bg-orange-200">HTML</div>
+                  <div class="px-3 rounded-full border text-cyan-700 border-cyan-500 bg-cyan-200">CSS</div>
+                  <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
+                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">JQuery</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={darkoxygen} alt="Led Controller" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">a small porfolio-ish site for a friend of mine. he is a streamer sheesh.</p>
+              </div>
+            </div>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">ZemisLocker</h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={zemislocker} alt="ZemisLocker" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output.</p>
+              </div>
+            </div>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">Shitcast <a href="https://github.com/Ucaninek/shitcast" class="underline text-sm">Github</a></h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
+                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
+                  <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={shitcast} alt="Shitcast" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">as the name suggests, this is the shittiest messaging app for your local network. works with express.</p>
+              </div>
+            </div>
+            <div className="project-container">
+              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
+                <h4 className="font-medium text-gray-700 text-xl mb-1">4Our in a row <a href="https://github.com/Ucaninek/four-in-a-row" class="underline text-sm">Github</a></h4>
+                <div className="tag-container">
+                  <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
+                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Discord.js</div>
+                </div>
+                <div className="max-w-md">
+                  <img src={fourinarow} alt="4our in a row" className="mb-8" />
+                </div>
+                <p className="font-normal text-gray-500 text-md">The classing four in a row game in discord! has language support and a changeable prefix.</p>
+              </div>
             </div>
           </div>
         </div>

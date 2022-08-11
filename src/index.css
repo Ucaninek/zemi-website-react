@@ -9,3 +9,11 @@
 .btn-secondary {
     @apply px-7 py-3 md:px-9 md:py-4 font-medium md:font-semibold border-2 bg-white text-gray-700 border-gray-100 text-sm rounded-md hover:border-amber-400 hover:bg-gray-50 hover:border-2 transition ease-out duration-200
 }
+
+.project-container {
+    @apply flex flex-wrap justify-between gap-6
+}
+
+.tag-container {
+    @apply flex justify-start items-center flex-wrap text-start mb-4 gap-2
+}
