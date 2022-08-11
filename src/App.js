@@ -9,13 +9,16 @@ import fourinarow from './assets/projects/fourinarow.png';
 import thiswebsite from './assets/projects/thiswebsite.png';
 import Navbar from './components/navbar.js';
 import ProjectCard from './components/project-card.js';
+import TechCard from './components/tech-card.js';
 
 function App() {
+
+  console.log('(　o=^•ェ•)o　hello hooman');
   return (
     <>
       <Navbar />
       <section className="py-4 md:py-5">
-        <svg class="absolute opacity-10 right-0 md:right-8 md:opacity-30 lg:opacity-70 xl:right-32 -z-10" width="404" height="784" fill="none" viewBox="0 0 404 784"><defs><pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" class="text-amber-400" fill="currentColor"></rect></pattern></defs><rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"></rect></svg>
+        <svg className="absolute opacity-10 right-0 md:right-8 md:opacity-30 lg:opacity-70 xl:right-32 -z-10" width="404" height="784" fill="none" viewBox="0 0 404 784"><defs><pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" className="text-amber-400" fill="currentColor"></rect></pattern></defs><rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"></rect></svg>
         <div className="container max-w-screen-xl mx-auto">
           <div className="text-start ml-5">
             <span className="text-gray-900 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
@@ -33,7 +36,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <ProjectCard image={thiswebsite} title="This website" github="https://github.com/Ucaninek/zemi-website-react/" desc="yes. you are viewing this project right now. how epic!"
               tags={[
-                { text: 'JavaScript', classes: 'text-amber-700 border-amber-500, bg-amber-200' },
+                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
                 { text: 'Tailwind CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
                 { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
             <ProjectCard image={pisimaka} title="Pisimaka.exe" desc="A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off."
@@ -49,7 +52,7 @@ function App() {
               tags={[
                 { text: 'HTML', classes: 'text-orange-600 border-orange-500 bg-orange-200' },
                 { text: 'CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
-                { text: 'JavaScript', classes: 'text-amber-700 border-amber-500, bg-amber-200' },
+                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
                 { text: 'JQuery', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
             <ProjectCard image={zemislocker} title="ZemisLocker" desc="a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output."
               tags={[
@@ -64,6 +67,18 @@ function App() {
               tags={[
                 { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
                 { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-10 md:py-16">
+        <div className="container max-w-screen-xl mx-auto px-4">
+          <div className="w-fit h-fit mb-8 relative">
+            <div className="text-4xl text-slate-800 md:text-5xl font-medium">Tech I Use</div>
+            <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+            <TechCard name="React.js" desc="React is good" usingFor="Recent" tags={[{ text: 'Framework', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
           </div>
         </div>
       </section>
