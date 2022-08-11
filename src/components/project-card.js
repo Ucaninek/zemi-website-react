@@ -1,4 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
+import Tag from './tag.js';
 
 function ProjectCard({ title, desc, github, image, tags }) {
     console.log(uuidv4().toString());
@@ -14,7 +15,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
                     <div className="tag-container">
                         {
                             tags.map(({ text, classes }) => (
-                                <div className={`px-3 rounded-full border ${classes}`}>{text}</div>
+                                <Tag text={text} classes={classes} />
                             ))
                         }
                     </div>
