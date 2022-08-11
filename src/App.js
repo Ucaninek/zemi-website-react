@@ -1,5 +1,4 @@
 import './App.css';
-import face from './assets/logo.png'
 import { Mastodon, Discord } from "react-bootstrap-icons"
 import pisimaka from './assets/projects/pisimaka.png';
 import ledcontroller from './assets/projects/ledcontroller.png'
@@ -8,18 +7,13 @@ import zemislocker from './assets/projects/zemislocker.png';
 import shitcast from './assets/projects/shitcast.png';
 import fourinarow from './assets/projects/fourinarow.png';
 import thiswebsite from './assets/projects/thiswebsite.png';
+import Navbar from './components/navbar.js';
+import ProjectCard from './components/project-card.js';
 
 function App() {
   return (
     <>
-      <div className="w-full sticky top-0 h-24 p-6 z-50">
-        <nav className="flex items-center justify-between gap-1 mb-16 bg-transparent backdrop-blur-lg rounded-xl h-12 w-full shadow-lg pl-3 md:pl-8 pr-2">
-          <a href="#top"><img src={face} className="w-16" alt="Logo" /></a>
-          <div>
-            <a href="#top" className="p-1 rounded-md border-2 font-[consolas]  border-amber-400">./home</a>
-          </div>
-        </nav>
-      </div>
+      <Navbar />
       <section className="py-4 md:py-5">
         <svg class="absolute opacity-10 right-0 md:right-8 md:opacity-30 lg:opacity-70 xl:right-32 -z-10" width="404" height="784" fill="none" viewBox="0 0 404 784"><defs><pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" class="text-amber-400" fill="currentColor"></rect></pattern></defs><rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"></rect></svg>
         <div className="container max-w-screen-xl mx-auto">
@@ -37,102 +31,39 @@ function App() {
             <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">This website <a href="https://github.com/Ucaninek/zemi-website-react" class="underline text-sm">Github</a></h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-cyan-700 border-cyan-500 bg-cyan-200">Tailwind CSS</div>
-                  <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
-                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">React.js</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={thiswebsite} alt="This website" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">The website you are viewing right now. yes.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">Pisimaka.exe</h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={pisimaka} alt="pisimaka" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">LedController</h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
-                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Arduino</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={ledcontroller} alt="pisimaka" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">i hooked up the leds in my pc case to an arduino because my dumb msi motherboard only could do 7 hardcoded colors, dumb. this the app that controls the arduino with a COM port.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">DarkOxyGen Website</h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-orange-600 border-orange-500 bg-orange-200">HTML</div>
-                  <div class="px-3 rounded-full border text-cyan-700 border-cyan-500 bg-cyan-200">CSS</div>
-                  <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
-                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">JQuery</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={darkoxygen} alt="Led Controller" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">a small porfolio-ish site for a friend of mine. he is a streamer sheesh.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">ZemisLocker</h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={zemislocker} alt="ZemisLocker" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">Shitcast <a href="https://github.com/Ucaninek/shitcast" class="underline text-sm">Github</a></h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
-                  <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
-                  <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={shitcast} alt="Shitcast" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">as the name suggests, this is the shittiest messaging app for your local network. works with express.</p>
-              </div>
-            </div>
-            <div className="project-container">
-              <div className="bg-gray-100 px-8 py-10 rounded-md grow shrink">
-                <h4 className="font-medium text-gray-700 text-xl mb-1">4Our in a row <a href="https://github.com/Ucaninek/four-in-a-row" class="underline text-sm">Github</a></h4>
-                <div className="tag-container">
-                  <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
-                  <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Discord.js</div>
-                </div>
-                <div className="max-w-lg">
-                  <img src={fourinarow} alt="4our in a row" className="mb-8" />
-                </div>
-                <p className="font-normal text-gray-500 text-md">The classing four in a row game in discord! has language support and a changeable prefix.</p>
-              </div>
-            </div>
+            <ProjectCard image={thiswebsite} title="This website" github="https://github.com/Ucaninek/zemi-website-react/" desc="yes. you are viewing this project right now. how epic!"
+              tags={[
+                { text: 'JavaScript', classes: 'text-amber-700 border-amber-500, bg-amber-200' },
+                { text: 'Tailwind CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
+                { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+            <ProjectCard image={pisimaka} title="Pisimaka.exe" desc="A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off."
+              tags={[
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' }]} />
+            <ProjectCard image={ledcontroller} title="LedController" desc="i hooked up the leds in my pc case to an arduino because my dumb msi motherboard only could do 7 hardcoded colors, dumb. this the app that controls the arduino with a COM port."
+              tags={[
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Arduino', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+            <ProjectCard image={darkoxygen} title="DarkOxyGen Website" desc="a small porfolio-ish site for a friend of mine. he is a streamer sheesh."
+              tags={[
+                { text: 'HTML', classes: 'text-orange-600 border-orange-500 bg-orange-200' },
+                { text: 'CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
+                { text: 'JavaScript', classes: 'text-amber-700 border-amber-500, bg-amber-200' },
+                { text: 'JQuery', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+            <ProjectCard image={zemislocker} title="ZemisLocker" desc="a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output."
+              tags={[
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' }]} />
+            <ProjectCard image={shitcast} title="Shitcast" github="https://github.com/Ucaninek/shitcast" desc="as the name suggests, this is the shittiest messaging app for your local network. works with express."
+              tags={[
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' },
+                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' }]} />
+            <ProjectCard image={fourinarow} title="4our in a row" github="https://github.com/Ucaninek/four-in-a-row" desc="The classic four in a row game in discord! has language support and a changeable prefix."
+              tags={[
+                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
+                { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
           </div>
         </div>
       </section>
@@ -207,7 +138,7 @@ function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -222,7 +153,7 @@ function App() {
             </div>
 
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -237,7 +168,7 @@ function App() {
             </div>
 
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -252,7 +183,7 @@ function App() {
             </div>
 
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -267,7 +198,7 @@ function App() {
             </div>
 
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -282,7 +213,7 @@ function App() {
             </div>
 
             <div className="bg-gray-50 px-8 py-10 rounded-md">
-              <h4 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h4>
+              <h2 className="font-medium text-gray-700 text-lg mb-4">2015 – 2016</h2>
 
               <p className="font-normal text-gray-500 text-md mb-4">
                 Lorem ipsum dolor sit amet, consectetur <br />
@@ -481,14 +412,6 @@ function App() {
           </div>
         </div>
       </footer>
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script src="./assets/js/script.js"></script>
-
-      <script>
-        feather.replace();
-      </script>
     </>
   );
 }

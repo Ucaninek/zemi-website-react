@@ -11,7 +11,7 @@
 }
 
 .project-container {
-    @apply flex flex-wrap justify-between gap-6 shadow-lg
+    @apply flex flex-wrap justify-between gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl
 }
 
 .tag-container {
