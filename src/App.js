@@ -11,6 +11,8 @@ import Navbar from './components/navbar.js';
 import ProjectCard from './components/project-card.js';
 import TechCard from './components/tech-card.js';
 
+import tech_react from './assets/tech/react.webp';
+
 function App() {
 
   console.log('(　o=^•ェ•)o　hello hooman');
@@ -77,8 +79,9 @@ function App() {
             <div className="text-4xl text-slate-800 md:text-5xl font-medium">Tech I Use</div>
             <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            <TechCard name="React.js" desc="React is good" usingFor="Recent" tags={[{ text: 'Framework', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <TechCard name="React.js" image={tech_react} desc="React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies." usingFor="Recent" tags={[{ text: 'Framework', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
           </div>
         </div>
       </section>

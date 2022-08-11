@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import Viewer from 'react-viewer';
 import Tag from './tag.js';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState } from 'react';
 
 function ProjectCard({ title, desc, github, image, tags }) {
@@ -21,7 +22,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
                     }
                 </div>
                 <div className="max-w-lg">
-                    <img src={image} alt={title} className="mb-8" onClick={() => { setVisible(true); }} />
+                    <LazyLoadImage src={image} alt={title} className="mb-8" onClick={() => { setVisible(true); }} />
                     <div>
                         <Viewer
                             visible={visible}
