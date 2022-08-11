@@ -14,27 +14,27 @@ function App() {
     <>
       <div className="w-full sticky top-0 h-24 p-6 z-50">
         <nav className="flex items-center justify-between gap-1 mb-16 bg-transparent backdrop-blur-lg rounded-xl h-12 w-full shadow-lg pl-3 md:pl-8 pr-2">
-          <a href="#top" className="scroll"><img src={face} className="w-16" alt="Logo" /></a>
+          <a href="#top"><img src={face} className="w-16" alt="Logo" /></a>
           <div>
-            <a href="#top" className="bg-gray-50 scroll p-1 rounded-md border-2 font-[consolas] scroll border-amber-400">./home</a>
+            <a href="#top" className="p-1 rounded-md border-2 font-[consolas]  border-amber-400">./home</a>
           </div>
         </nav>
       </div>
       <section className="py-4 md:py-5">
+        <svg class="absolute opacity-10 right-0 md:right-8 md:opacity-30 lg:opacity-70 xl:right-32 -z-10" width="404" height="784" fill="none" viewBox="0 0 404 784"><defs><pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" class="text-amber-400" fill="currentColor"></rect></pattern></defs><rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"></rect></svg>
         <div className="container max-w-screen-xl mx-auto">
           <div className="text-start ml-5">
             <span className="text-gray-900 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
-            <p className="font-normal text-gray-600 text-md md:text-xl max-w-screen-sm mb-8">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
-            <a href="#cards" className="scroll"><button id="cards" className="btn-primary">Literally just scroll down</button></a>
+            <p className="font-normal text-gray-600 text-md md:text-xl max-w-sm md:max-w-screen-sm mb-8">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
           </div>
         </div>
       </section>
 
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-xl mx-auto px-4">
-          <div className="w-fit h-fit mb-8">
+          <div className="w-fit h-fit mb-8 relative">
             <div className="text-4xl text-slate-800 md:text-5xl font-medium">Projects</div>
-            <div className="h-2 w-full bg-amber-400"></div>
+            <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <div className="project-container">
@@ -45,7 +45,7 @@ function App() {
                   <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
                   <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">React.js</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={thiswebsite} alt="This website" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">The website you are viewing right now. yes.</p>
@@ -58,7 +58,7 @@ function App() {
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={pisimaka} alt="pisimaka" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off.</p>
@@ -72,7 +72,7 @@ function App() {
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
                   <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Arduino</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={ledcontroller} alt="pisimaka" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">i hooked up the leds in my pc case to an arduino because my dumb msi motherboard only could do 7 hardcoded colors, dumb. this the app that controls the arduino with a COM port.</p>
@@ -87,7 +87,7 @@ function App() {
                   <div class="px-3 rounded-full border text-amber-700 border-amber-500 bg-amber-200">JavaScript</div>
                   <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">JQuery</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={darkoxygen} alt="Led Controller" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">a small porfolio-ish site for a friend of mine. he is a streamer sheesh.</p>
@@ -100,7 +100,7 @@ function App() {
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">C#</div>
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={zemislocker} alt="ZemisLocker" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output.</p>
@@ -114,7 +114,7 @@ function App() {
                   <div class="px-3 rounded-full border text-green-700 border-green-500 bg-green-200">Winforms</div>
                   <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={shitcast} alt="Shitcast" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">as the name suggests, this is the shittiest messaging app for your local network. works with express.</p>
@@ -127,7 +127,7 @@ function App() {
                   <div class="px-3 rounded-full border text-amber-600 border-amber-400 bg-amber-200">Node.js</div>
                   <div class="px-3 rounded-full border text-indigo-700 border-indigo-500 bg-indigo-200">Discord.js</div>
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-lg">
                   <img src={fourinarow} alt="4our in a row" className="mb-8" />
                 </div>
                 <p className="font-normal text-gray-500 text-md">The classing four in a row game in discord! has language support and a changeable prefix.</p>

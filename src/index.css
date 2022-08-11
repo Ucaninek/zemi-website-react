@@ -11,9 +11,23 @@
 }
 
 .project-container {
-    @apply flex flex-wrap justify-between gap-6
+    @apply flex flex-wrap justify-between gap-6 shadow-lg
 }
 
 .tag-container {
     @apply flex justify-start items-center flex-wrap text-start mb-4 gap-2
 }
+
+::-moz-selection { /* Code for Firefox */
+    color: white;
+    background: #FFCA28;
+  }
+  
+  ::selection {
+    color: white;
+    background: #FFCA28;
+  }
+
+  * {
+    transition: all .2s ease-in-out !important;
+  }
