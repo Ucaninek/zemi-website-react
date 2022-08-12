@@ -1,5 +1,4 @@
 import './App.css';
-import { Mastodon, Discord } from "react-bootstrap-icons"
 import pisimaka from './assets/projects/pisimaka.png';
 import ledcontroller from './assets/projects/ledcontroller.png'
 import darkoxygen from './assets/projects/dog.png';
@@ -8,6 +7,7 @@ import shitcast from './assets/projects/shitcast.png';
 import fourinarow from './assets/projects/fourinarow.png';
 import thiswebsite from './assets/projects/thiswebsite.png';
 import Navbar from './components/navbar.js';
+import Footer from './components/footer.js';
 import ProjectCard from './components/project-card.js';
 import TechCard from './components/tech-card.js';
 
@@ -93,44 +93,23 @@ function App() {
             <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-16">
             <TechCard name="C#" image={tech_cs} desc="C# is an object-oriented programming language created by Microsoft that runs on the .NET Framework. C# has roots from the C family, and the language is close to other popular languages like C++ and Java." usingFor="Five years" tags={[{ text: 'Language', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="JavaScript" image={tech_js} desc="JavaScript is a high-level, dynamic, untyped, and interpreted programming language. It is often abbreviated as JS, and is often called ECMAScript. It has been standardized in the ECMAScript specification." usingFor="Four years" tags={[{ text: 'Language', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="HTML" image={tech_html} desc="HTML is the standard markup language for creating Web pages. HTML elements are the building blocks of HTML pages. HTML pages can be created by combining HTML elements to create visually rich, formatted pages." usingFor="Four years" tags={[{ text: 'Language', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="CSS" image={tech_css} desc="CSS is a style sheet language used for describing the presentation of a document written in a markup language like HTML. CSS is a cornerstone technology of the World Wide Web." usingFor="Four years" tags={[{ text: 'Language', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="Python" image={tech_python} desc="Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace." usingFor="Four years" tags={[{ text: 'Language', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="JQuery" image={tech_jquery} desc="JQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy to use API that works across a multitude of browsers." usingFor="Three years" tags={[{ text: 'Library', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
-            <TechCard name="Anime.js" image={tech_anime} desc="Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API. It works with CSS properties, SVG, DOM attributes and JavaScript Objects." usingFor="One year" tags={[{ text: 'Library', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="Node.js" image={tech_node} desc="Node.js is an open-source, cross-platform JavaScript runtime environment that executes JavaScript code server-side. Node.js lets developers use JavaScript to write command line tools and for server-side scripting." usingFor="Two years" tags={[{ text: 'Runtime', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="Discord.js" image={tech_djs} desc="Discord.js is a powerful Node.js module that allows create chat applications very easily. It is based on the Discord API and uses websockets to communicate with the Discord servers." usingFor="Two years" tags={[{ text: 'Library', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
+            <TechCard name="Anime.js" image={tech_anime} desc="Anime.js (/ˈæn.ə.meɪ/) is a lightweight JavaScript animation library with a simple, yet powerful API. It works with CSS properties, SVG, DOM attributes and JavaScript Objects." usingFor="One year" tags={[{ text: 'Library', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="TailwindCSS" image={tech_twcss} desc="Tailwind CSS is a utility-first CSS framework for rapid UI development. It is designed for use with React and React Native." usingFor="Recent" tags={[{ text: 'Framework', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="Github" image={tech_github} desc="GitHub, Inc., is an Internet hosting service for software development and version control using Git. It provides the distributed version control of Git plus access control, bug tracking, software feature requests, task management, continuous integration, and wikis for every project." usingFor="Recent" tags={[{ text: 'Tool', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
             <TechCard name="React.js" image={tech_react} desc="React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies." usingFor="Recent" tags={[{ text: 'Framework', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} ></TechCard>
           </div>
         </div>
       </section>
-
-      <footer className="py-10 md:py-16 mb-20 md:mb-40 lg::mb-52">
-        <div className="container max-w-screen-2xl mx-auto px-4">
-          <div className="text-center">
-            <h1 className="font-medium text-gray-700 text-4xl md:text-5xl mb-5">Testimonial</h1>
-
-            <p className="font-normal text-gray-400 text-md md:text-lg mb-20">
-              I’m not currently taking on new client work but feel free to contact me for any <br />
-              other inquiries.
-            </p>
-
-            <div className="flex items-center justify-center space-x-8">
-              <a href="https://discord.gg/bk3S9qD8EB" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                <Discord className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500" />
-              </a>
-              <a href="https://social.linux.pizza/@zemi" className="w-16 h-16 flex items-center justify-center rounded-full hover:bg-gray-200 transition ease-in-out duration-500">
-                <Mastodon className="text-gray-500 hover:text-gray-700 transition ease-in-out duration-500" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

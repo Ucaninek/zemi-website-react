@@ -5,8 +5,8 @@ function techCard({ name, desc, usingFor, tags, image }) {
     return (
         <div className="tech-container" key={uuidv4().toString()}>
             <div className="bg-gray-100 p-5 rounded-md">
-                <div className="flex items-center justify-between gap-5">
-                    <div className="rounded-md overflow-hidden">
+                <div className="flex items-center h-full justify-between gap-5">
+                    <div className="rounded-md overflow-hidden items-center">
                         <LazyLoadImage src={image} alt={name} width={256} />
                     </div>
                     <div>

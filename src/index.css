@@ -11,11 +11,11 @@
 }
 
 .project-container {
-    @apply flex flex-wrap justify-between gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl
+    @apply flex flex-wrap justify-between gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl custom-transition
 }
 
 .tech-container {
-  @apply flex flex-wrap justify-start gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl
+  @apply flex flex-wrap justify-start gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl custom-transition
 }
 
 .tag-container {
@@ -32,6 +32,6 @@
     background: #FFCA28;
   }
 
-  * {
+  .custom-transition {
     transition: all .2s ease-in-out !important;
   }
