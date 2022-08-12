@@ -35,11 +35,12 @@ function App() {
         <div className="container max-w-screen-2xl mx-auto">
           <div className="text-start ml-5">
             <span className="text-gray-900 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
-            <p className="font-normal text-gray-600 text-md md:text-xl max-w-sm md:max-w-screen-sm mb-8">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
+            <p className="font-normal text-gray-600 text-md md:text-xl max-w-sm md:max-w-screen-sm">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
           </div>
         </div>
       </section>
 
+      <div id="projects" className="mb-10"></div>
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-2xl mx-auto px-4">
           <div className="w-fit h-fit mb-8 relative">
@@ -85,6 +86,7 @@ function App() {
       </section>
 
       <section className="py-10">
+        <div id="tech" className="mb-24"></div>
         <div className="container max-w-screen-2xl mx-auto px-4">
           <div className="w-fit h-fit mb-8 relative">
             <div className="text-4xl text-slate-800 md:text-5xl font-medium grow shrink">Tech I Use</div>
