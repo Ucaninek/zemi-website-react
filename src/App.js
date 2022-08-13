@@ -16,7 +16,7 @@ import tech_html from './assets/tech/html.webp';
 import tech_css from './assets/tech/css.webp';
 import tech_js from './assets/tech/javascript.webp';
 import tech_node from './assets/tech/nodejs.png';
-import tech_jquery from './assets/tech/jquery.webp';
+import tech_jquery from './assets/tech/jquery.png';
 import tech_anime from './assets/tech/animejs.png';
 import tech_twcss from './assets/tech/tailwindcss.webp';
 import tech_github from './assets/tech/github.webp';
@@ -34,8 +34,8 @@ function App() {
         <svg className="absolute opacity-10 right-0 md:right-8 md:opacity-30 lg:opacity-70 xl:right-32 -z-10" width="404" height="784" fill="none" viewBox="0 0 404 784"><defs><pattern id="d2a68204-c383-44b1-b99f-42ccff4e5365" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><rect x="0" y="0" width="4" height="4" className="text-amber-400" fill="currentColor"></rect></pattern></defs><rect width="404" height="784" fill="url(#d2a68204-c383-44b1-b99f-42ccff4e5365)"></rect></svg>
         <div className="container max-w-screen-2xl mx-auto">
           <div className="text-start ml-5">
-            <span className="text-gray-900 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
-            <p className="font-normal text-gray-600 text-md md:text-xl max-w-sm md:max-w-screen-sm">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
+            <span className="text-gray-900 dark:text-gray-50 font-black block text-5xl md:text-7xl leading-none mb-8">Hi, im <span className="text-amber-400">Zemi.</span></span>
+            <p className="font-normal text-gray-600 dark:text-gray-300 text-md md:text-xl max-w-sm md:max-w-screen-sm">I'm a teenager with a passion for software. I am mostly confident about making c# apps and working with javascript. i am currently learning react.</p>
           </div>
         </div>
       </section>
@@ -44,7 +44,7 @@ function App() {
       <section className="py-10 md:py-16">
         <div className="container max-w-screen-2xl mx-auto px-4">
           <div className="w-fit h-fit mb-8 relative">
-            <div className="text-4xl text-slate-800 md:text-5xl font-medium">Projects</div>
+            <div className="text-4xl text-slate-800 dark:text-gray-50 md:text-5xl font-medium">Projects</div>
             <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -80,7 +80,7 @@ function App() {
             <ProjectCard image={fourinarow} title="4our in a row" github="https://github.com/Ucaninek/four-in-a-row" desc="The classic four in a row game in discord! has language support and a changeable prefix."
               tags={[
                 { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
-                { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+                { text: 'Discord.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
           </div>
         </div>
       </section>
@@ -89,7 +89,7 @@ function App() {
         <div id="tech" className="mb-24"></div>
         <div className="container max-w-screen-2xl mx-auto px-4">
           <div className="w-fit h-fit mb-8 relative">
-            <div className="text-4xl text-slate-800 md:text-5xl font-medium grow shrink">Tech I Use</div>
+            <div className="text-4xl text-slate-800 dark:text-gray-50 md:text-5xl font-medium grow shrink">Tech I Use</div>
             <span className="h-2 w-full bottom-1 left-0 z-10 absolute bg-amber-400 opacity-80"></span>
           </div>
 

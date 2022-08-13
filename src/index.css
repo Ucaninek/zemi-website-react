@@ -11,15 +11,22 @@
 }
 
 .project-container {
-    @apply flex flex-wrap justify-between gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl custom-transition
+    @apply flex flex-wrap justify-between gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl rounded-xl 
 }
 
 .tech-container {
-  @apply flex flex-wrap justify-start gap-6 drop-shadow-xl hover:bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl custom-transition
+  @apply flex flex-wrap justify-start gap-6 drop-shadow-xl bg-gray-200 transform hover:-translate-y-2 hover:drop-shadow-2xl rounded-xl 
 }
 
 .tag-container {
-    @apply flex justify-start items-center flex-wrap text-start mb-4 gap-2
+  @apply flex justify-start items-center flex-wrap text-start mb-4 gap-2
+}
+
+body {
+  @apply bg-white dark:bg-slate-900
+}
+* {
+  transition: all .2s ease-in-out !important;
 }
 
 ::-moz-selection { /* Code for Firefox */
@@ -30,8 +37,4 @@
   ::selection {
     color: white;
     background: #FFCA28;
-  }
-
-  .custom-transition {
-    transition: all .2s ease-in-out !important;
   }
