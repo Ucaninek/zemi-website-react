@@ -3,6 +3,7 @@ import Viewer from 'react-viewer';
 import Tag from './tag.js';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState } from 'react';
+import { Github } from "react-bootstrap-icons";
 
 function ProjectCard({ title, desc, github, image, tags }) {
     var git = '';
@@ -12,8 +13,8 @@ function ProjectCard({ title, desc, github, image, tags }) {
     const [visible, setVisible] = useState(false);
     return (
         <div className="project-container" key={uuidv4().toString()}>
-            <div className="bg-gray-100 dark:bg-slate-800 px-8 py-10 rounded-md grow shrink cursor-pointer">
-                <h2 className="font-medium text-gray-700 dark:text-gray-200 text-xl mb-1">{title} {(git === '') ? '' : <a href={github} className="underline text-sm">Github</a>}</h2>
+            <div className="bg-gray-100 dark:bg-slate-800 px-6 pt-4 pb-6 rounded-md grow shrink cursor-pointer">
+                <h2 className="font-medium text-gray-700 dark:text-gray-200 text-xl mb-1">{(git === '') ? title : <div className="flex justify-between items-center">{title}<a href={github} className="w-10 h-10 flex items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition ease-in-out duration-200"><Github className="w-8 h-8 text-gray-500 dark:text-gray-200 hover:text-gray-700 dark:hover:text-gray-300 transition ease-in-out duration-200" /></a></div>}</h2>
                 <div className="tag-container">
                     {
                         tags.map(({ text, classes }) => (
