@@ -22,14 +22,14 @@ function ProjectCard({ title, desc, github, image, tags }) {
                         ))
                     }
                 </div>
-                <div className="max-w-lg" onClick={() => { setVisible(true) }}>
+                <div className="max-w-lg">
                     <ProgressiveImage
                         preview={image}
                         src={image}
                         alt={title}
                         transitionTime={500}
                         transitionFunction="ease"
-                        render={(src, style) => <img src={src} alt={title} style={style} />}
+                        render={(src, style) => <img src={src} alt={title} style={style} onClick={() => { setVisible(true) }} />}
                     />
                     <div>
                         <Viewer
@@ -46,7 +46,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
                 </div>
                 <p className="font-normal text-gray-500 dark:text-gray-300 text-md">{desc}</p>
             </div>
-        </div>
+        </div >
     );
 }
 
