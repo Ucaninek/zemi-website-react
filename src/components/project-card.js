@@ -12,7 +12,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
     const [visible, setVisible] = useState(false);
     return (
         <div className="project-container" key={uuidv4().toString()}>
-            <div className="bg-gray-100 dark:bg-slate-800 px-8 py-10 rounded-md grow shrink">
+            <div className="bg-gray-100 dark:bg-slate-800 px-8 py-10 rounded-md grow shrink cursor-pointer">
                 <h2 className="font-medium text-gray-700 dark:text-gray-200 text-xl mb-1">{title} {(git === '') ? '' : <a href={github} className="underline text-sm">Github</a>}</h2>
                 <div className="tag-container">
                     {

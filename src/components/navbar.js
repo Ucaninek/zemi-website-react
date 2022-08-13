@@ -1,6 +1,6 @@
 import face from '../assets/logo.png'
 import { useState } from 'react';
-import { MoonFill, Sun, SunFill } from 'react-bootstrap-icons';
+import { MoonFill, SunFill } from 'react-bootstrap-icons';
 
 function Navbar() {
     const [isProjectLineShown, setIsProjectLineShown] = useState(false);
