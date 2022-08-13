@@ -1,17 +1,27 @@
 import face from '../assets/logo.png'
-import { useState } from 'react';
+import * as React from 'react';
 import { MoonFill, SunFill } from 'react-bootstrap-icons';
+import { useCookies } from 'react-cookie';
 
 function Navbar() {
-    const [isProjectLineShown, setIsProjectLineShown] = useState(false);
-    const [isTechLineShown, setIsTechLineShown] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    // eslint-disable-next-line no-unused-vars
+    const [cookies, setCookie, _removeCookie] = useCookies(['cookie-name']);
+    const [isProjectLineShown, setIsProjectLineShown] = React.useState(false);
+    const [isTechLineShown, setIsTechLineShown] = React.useState(false);
+    const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+    React.useEffect(() => {
+        if (cookies.dark === 'yea') //dark mode enabled lesgo
+            darkMode(true);
+    });
+
     var darkMode = (val) => {
         var toggle = document.querySelector('#dark-mode-toggle');
         var img1 = document.querySelector('#dark-mode-toggle-img-1');
         var img2 = document.querySelector('#dark-mode-toggle-img-2');
         setIsDarkMode(val);
         if (val) {
+            setCookie('dark', 'yea', { sameSite: 'strict', expires: false });
             document.documentElement.classList.add('dark');
             toggle.classList.remove('translate-x-0');
             toggle.classList.add('translate-x-5');
@@ -20,6 +30,7 @@ function Navbar() {
             img2.classList.remove('toggle-out');
             img2.classList.add('toggle-in');
         } else {
+            setCookie('dark', 'nay', { sameSite: 'strict', expires: false });
             document.documentElement.classList.remove('dark');
             toggle.classList.remove('translate-x-5');
             toggle.classList.add('translate-x-0');
