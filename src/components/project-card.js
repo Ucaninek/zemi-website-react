@@ -1,7 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
 import Viewer from 'react-viewer';
 import Tag from './tag.js';
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { useState } from 'react';
 import ProgressiveImage from "react-progressive-image-loading";
 import { Github } from "react-bootstrap-icons";
@@ -23,14 +22,14 @@ function ProjectCard({ title, desc, github, image, tags }) {
                         ))
                     }
                 </div>
-                <div className="max-w-lg">
+                <div className="max-w-lg" onClick={() => { setVisible(true) }}>
                     <ProgressiveImage
                         preview={image}
                         src={image}
                         alt={title}
                         transitionTime={500}
                         transitionFunction="ease"
-                        render={(src, style) => <img src={src} style={style} />}
+                        render={(src, style) => <img src={src} alt={title} style={style} />}
                     />
                     <div>
                         <Viewer
