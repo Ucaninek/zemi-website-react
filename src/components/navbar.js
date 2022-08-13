@@ -8,18 +8,17 @@ function Navbar() {
     const [cookies, setCookie, _removeCookie] = useCookies(['cookie-name']);
     const [isProjectLineShown, setIsProjectLineShown] = React.useState(false);
     const [isTechLineShown, setIsTechLineShown] = React.useState(false);
-    const [isDarkMode, setIsDarkMode] = React.useState(false);
+    const [isDarkMode, setIsDarkMode] = React.useState((cookies.dark === 'yea' || false));
 
     React.useEffect(() => {
-        if (cookies.dark === 'yea') //dark mode enabled lesgo
-            darkMode(true);
+        darkMode(isDarkMode, false);
     });
 
-    var darkMode = (val) => {
+    var darkMode = (val, set) => {
         var toggle = document.querySelector('#dark-mode-toggle');
         var img1 = document.querySelector('#dark-mode-toggle-img-1');
         var img2 = document.querySelector('#dark-mode-toggle-img-2');
-        setIsDarkMode(val);
+        if (set === true) setIsDarkMode(val);
         if (val) {
             setCookie('dark', 'yea', { sameSite: 'strict', expires: false });
             document.documentElement.classList.add('dark');
@@ -55,7 +54,7 @@ function Navbar() {
                     <span className={(isTechLineShown ? 'w-full' : 'w-0') + ' h-1.5 bottom-0.5 left-0 z-10 absolute bg-amber-400 opacity-80 pointer-events-none custom-transition'}></span>
                 </div>
                 <div className="absolute right-4 md:right-16">
-                    <button type="button" onClick={() => { darkMode(!isDarkMode) }} className="bg-gray-200 dark:bg-gray-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-amber-400 dark:focus:ring-indigo-400 dark:focus:ring-offset-slate-900" role="switch" aria-checked="false">
+                    <button type="button" onClick={() => { darkMode(!isDarkMode, true) }} className="bg-gray-200 dark:bg-gray-600 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2  focus:ring-amber-400 dark:focus:ring-indigo-400 dark:focus:ring-offset-slate-900" role="switch" aria-checked="false">
                         <span class="sr-only">Use setting</span>
                         {/* Enabled: "translate-x-5", Not Enabled: "translate-x-0" */}
                         <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200" id="dark-mode-toggle">
