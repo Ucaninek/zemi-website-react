@@ -22,6 +22,14 @@
   @apply flex justify-start items-center flex-wrap text-start mb-4 gap-2
 }
 
+.toggle-out {
+  @apply opacity-0 ease-out duration-100
+}
+
+.toggle-in {
+  @apply opacity-100 ease-in duration-200
+}
+
 body {
   @apply bg-white dark:bg-slate-900
 }

@@ -1,5 +1,6 @@
 import face from '../assets/logo.png'
 import { useState } from 'react';
+import { MoonFill, Sun, SunFill } from 'react-bootstrap-icons';
 
 function Navbar() {
     const [isProjectLineShown, setIsProjectLineShown] = useState(false);
@@ -7,15 +8,25 @@ function Navbar() {
     const [isDarkMode, setIsDarkMode] = useState(false);
     var darkMode = (val) => {
         var toggle = document.querySelector('#dark-mode-toggle');
+        var img1 = document.querySelector('#dark-mode-toggle-img-1');
+        var img2 = document.querySelector('#dark-mode-toggle-img-2');
         setIsDarkMode(val);
         if (val) {
             document.documentElement.classList.add('dark');
             toggle.classList.remove('translate-x-0');
             toggle.classList.add('translate-x-5');
+            img1.classList.remove('toggle-in');
+            img1.classList.add('toggle-out');
+            img2.classList.remove('toggle-out');
+            img2.classList.add('toggle-in');
         } else {
             document.documentElement.classList.remove('dark');
             toggle.classList.remove('translate-x-5');
             toggle.classList.add('translate-x-0');
+            img1.classList.remove('toggle-out');
+            img1.classList.add('toggle-in');
+            img2.classList.remove('toggle-in');
+            img2.classList.add('toggle-out');
         }
     };
 
@@ -38,16 +49,12 @@ function Navbar() {
                         {/* Enabled: "translate-x-5", Not Enabled: "translate-x-0" */}
                         <span class="translate-x-0 pointer-events-none relative inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200" id="dark-mode-toggle">
                             {/* Enabled: "opacity-0 ease-out duration-100", Not Enabled: "opacity-100 ease-in duration-200" */}
-                            <span class="opacity-100 ease-in duration-200 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
-                                <svg class="h-3 w-3 text-gray-400" fill="none" viewBox="0 0 12 12">
-                                    <path d="M4 8l2-2m0 0l2-2M6 6L4 4m2 2l2 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                                </svg>
+                            <span class="opacity-100 ease-in duration-200 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true" id="dark-mode-toggle-img-1">
+                                <SunFill className="w-3 h-3" style={{ color: "#FFCA28" }} />
                             </span>
                             {/* Enabled: "opacity-100 ease-in duration-200", Not Enabled: "opacity-0 ease-out duration-100" */}
-                            <span class="opacity-0 ease-out duration-100 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true">
-                                <svg class="h-3 w-3 text-indigo-600" fill="currentColor" viewBox="0 0 12 12">
-                                    <path d="M3.707 5.293a1 1 0 00-1.414 1.414l1.414-1.414zM5 8l-.707.707a1 1 0 001.414 0L5 8zm4.707-3.293a1 1 0 00-1.414-1.414l1.414 1.414zm-7.414 2l2 2 1.414-1.414-2-2-1.414 1.414zm3.414 2l4-4-1.414-1.414-4 4 1.414 1.414z" />
-                                </svg>
+                            <span class="opacity-0 ease-out duration-100 absolute inset-0 h-full w-full flex items-center justify-center transition-opacity" aria-hidden="true" id="dark-mode-toggle-img-2">
+                                <MoonFill className="w-3 h-3" style={{ color: "#5C6BC0" }} />
                             </span>
                         </span>
                     </button>
