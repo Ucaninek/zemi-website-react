@@ -24,7 +24,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
                 </div>
                 <div className="max-w-lg">
                     <ProgressiveImage
-                        preview={image}
+                        preview={image + '_thumb'}
                         src={image}
                         alt={title}
                         transitionTime={500}
