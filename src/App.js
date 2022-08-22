@@ -50,37 +50,37 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             <ProjectCard image={thiswebsite} title="This website" github="https://github.com/Ucaninek/zemi-website-react/" desc="yes. you are viewing this project right now. how epic!"
               tags={[
-                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
-                { text: 'Tailwind CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
-                { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-50' },
+                { text: 'Tailwind CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-50' },
+                { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-50' }]} />
             <ProjectCard image={pisimaka} title="Pisimaka.exe" desc="A small c# winforms game-ish app that contains my brothers pictures. has really cool graphical payloads. made this to piss him off."
               tags={[
-                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' }]} />
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-50' }]} />
             <ProjectCard image={ledcontroller} title="LedController" desc="i hooked up the leds in my pc case to an arduino because my dumb msi motherboard only could do 7 hardcoded colors, dumb. this the app that controls the arduino with a COM port."
               tags={[
-                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Arduino', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Arduino', classes: 'text-indigo-700 border-indigo-500 bg-indigo-50' }]} />
             <ProjectCard image={darkoxygen} title="DarkOxyGen Website" desc="a small porfolio-ish site for a friend of mine. he is a streamer sheesh."
               tags={[
-                { text: 'HTML', classes: 'text-orange-600 border-orange-500 bg-orange-200' },
-                { text: 'CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
-                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
-                { text: 'JQuery', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+                { text: 'HTML', classes: 'text-orange-600 border-orange-500 bg-orange-50' },
+                { text: 'CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-50' },
+                { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-50' },
+                { text: 'JQuery', classes: 'text-indigo-700 border-indigo-500 bg-indigo-50' }]} />
             <ProjectCard image={zemislocker} title="ZemisLocker" desc="a file locker made with c#. works with a password and locks the file with sha256 then base64 converts the bytes for a string output."
               tags={[
-                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' }]} />
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-50' }]} />
             <ProjectCard image={shitcast} title="Shitcast" github="https://github.com/Ucaninek/shitcast" desc="as the name suggests, this is the shittiest messaging app for your local network. works with express."
               tags={[
-                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' },
-                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' }]} />
+                { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-50' },
+                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-50' }]} />
             <ProjectCard image={fourinarow} title="4our in a row" github="https://github.com/Ucaninek/four-in-a-row" desc="The classic four in a row game in discord! has language support and a changeable prefix."
               tags={[
-                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
-                { text: 'Discord.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
+                { text: 'Node.js', classes: 'text-amber-600 border-amber-400 bg-amber-50' },
+                { text: 'Discord.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-50' }]} />
           </div>
         </div>
       </section>

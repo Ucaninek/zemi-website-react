@@ -4,7 +4,7 @@ import Tag from './tag.js';
 
 function techCard({ name, desc, usingFor, tags, image }) {
     return (
-        <div className="tech-container" key={uuidv4().toString()}>
+        <div className="tech-container">
             <div className="bg-gray-100 dark:bg-slate-800 p-5 rounded-md">
                 <div className="flex items-center h-full justify-between gap-5">
                     <div className="rounded-md overflow-hidden items-center">
@@ -28,7 +28,7 @@ function techCard({ name, desc, usingFor, tags, image }) {
                             }
                         </div>
                         <span className="text-amber-400 text-xl font-semibold">{usingFor}</span>
-                        <p className="font-normal text-gray-500 dark:text-gray-400 text-md">{desc}</p>
+                        <p className="font-normal text-gray-800 dark:text-gray-300 text-md">{desc}</p>
                     </div>
                 </div>
             </div>
