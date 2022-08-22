@@ -1,13 +1,21 @@
-import { LazyLoadImage } from 'react-lazy-load-image-component';
 import { v4 as uuidv4 } from 'uuid';
+import ProgressiveImage from "react-progressive-image-loading";
 import Tag from './tag.js';
+
 function techCard({ name, desc, usingFor, tags, image }) {
     return (
         <div className="tech-container" key={uuidv4().toString()}>
             <div className="bg-gray-100 dark:bg-slate-800 p-5 rounded-md">
                 <div className="flex items-center h-full justify-between gap-5">
                     <div className="rounded-md overflow-hidden items-center">
-                        <LazyLoadImage src={image} alt={name} width={256} />
+                        <ProgressiveImage width={256}
+                            preview={image}
+                            src={image}
+                            alt={name}
+                            transitionTime={500}
+                            transitionFunction="ease"
+                            render={(src, style) => <img src={src} alt={name} style={style} />} />
+
                     </div>
                     <div>
                         <div className="tag-container">
