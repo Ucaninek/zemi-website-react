@@ -53,7 +53,7 @@ function App() {
                 { text: 'Javascript', classes: 'text-amber-600 border-amber-400 bg-amber-200' },
                 { text: 'Tailwind CSS', classes: 'text-cyan-700 border-cyan-500 bg-cyan-200' },
                 { text: 'React.js', classes: 'text-indigo-700 border-indigo-500 bg-indigo-200' }]} />
-            <ProjectCard image={pisimaka} title="Pisimaka.exe" desc="A small c# winforms game-ish app that is contains my brothers pictures. has really cool graphical payloads. made this to piss him off."
+            <ProjectCard image={pisimaka} title="Pisimaka.exe" desc="A small c# winforms game-ish app that contains my brothers pictures. has really cool graphical payloads. made this to piss him off."
               tags={[
                 { text: 'C#', classes: 'text-green-700 border-green-500 bg-green-200' },
                 { text: 'Winforms', classes: 'text-green-700 border-green-500 bg-green-200' }]} />
