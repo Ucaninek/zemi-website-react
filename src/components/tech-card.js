@@ -8,13 +8,14 @@ function techCard({ name, desc, usingFor, tags, image }) {
             <div className="bg-gray-100 dark:bg-slate-800 p-5 rounded-md">
                 <div className="flex items-center h-full justify-between gap-5">
                     <div className="rounded-md overflow-hidden items-center">
-                        <ProgressiveImage width={256}
+                        <ProgressiveImage
+                            width={256}
                             preview={image}
                             src={image}
                             alt={name}
                             transitionTime={500}
                             transitionFunction="ease"
-                            render={(src, style) => <img src={src} alt={name} style={style} />} />
+                            render={(src, style) => <img src={src} alt={name} width={256} style={style} />} />
 
                     </div>
                     <div>
