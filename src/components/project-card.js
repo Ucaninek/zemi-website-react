@@ -18,7 +18,7 @@ function ProjectCard({ title, desc, github, image, tags }) {
                 <div className="tag-container">
                     {
                         tags.map(({ text, classes }) => (
-                            <Tag text={text} classes={classes} />
+                            <Tag key={uuidv4().toString()} text={text} classes={classes} />
                         ))
                     }
                 </div>

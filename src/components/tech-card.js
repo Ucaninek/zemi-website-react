@@ -14,11 +14,11 @@ function techCard({ name, desc, usingFor, tags, image }) {
                             <span className="font-medium text-gray-700 dark:text-gray-200 text-2xl">{name}</span>
                             {
                                 tags.map(({ text, classes }) => (
-                                    <Tag text={text} classes={classes} />
+                                    <Tag key={uuidv4().toString()} text={text} classes={classes} />
                                 ))
                             }
                         </div>
-                        <span class="text-amber-400 text-xl font-semibold">{usingFor}</span>
+                        <span className="text-amber-400 text-xl font-semibold">{usingFor}</span>
                         <p className="font-normal text-gray-500 dark:text-gray-400 text-md">{desc}</p>
                     </div>
                 </div>
